@@ -1,3 +1,5 @@
 #.gitignore for joyfull
 
 *.un~
+*.o
+test
