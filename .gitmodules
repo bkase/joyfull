@@ -1,0 +1,3 @@
+[submodule "FireBreath"]
+	path = FireBreath
+	url = git@github.com:bkase/FireBreath.git
