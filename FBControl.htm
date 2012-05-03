@@ -22,24 +22,31 @@
         
         function load()
         {
-            addEvent(plugin(), 'test', function(){
-                alert("Received a test event from the plugin.")
+            addEvent(plugin(), 'joystickData', function(data){
+                console.log(data);
+                alert(data);
             });
         }
         function pluginLoaded() {
             alert("Plugin loaded!");
         }
-        
-        function addTestEvent()
-        {
-            addEvent(plugin(), 'echo', function(txt,count){
-                alert(txt+count);
-            });
+
+        function init() {
+            if(plugin().init('/dev/input/js0')) {
+                console.log("Loaded successfully");
+            }
+            else {
+                console.log("Failed to load joystick");
+            }
         }
         
         function testEvent()
         {
             plugin().testEvent();
+        }
+
+        function poll() {
+            plugin().poll("anything");
         }
         
         function pluginValid()
@@ -57,7 +64,7 @@
 </object><br />
     
 <a href="#" onclick="javascript:pluginValid()">Click me!</a> <br />
-<a href="#" onclick="javascript:addTestEvent()">Activate click counter</a> <br />
-<a href="#" onclick="javascript:testEvent()">Fire a test event</a> <br />
+<a href="#" onclick="javascript:init()">Initialize Joystick</a> <br />
+<a href="#" onclick="javascript:poll()">Poll for a value</a> <br />
 </body>
 </html>
