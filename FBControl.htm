@@ -22,9 +22,8 @@
         
         function load()
         {
-            addEvent(plugin(), 'joystickData', function(data){
-                console.log(data);
-                alert(data);
+            addEvent(plugin(), 'joystickData', function(joyButton){
+                console.log(joyButton);
             });
         }
         function pluginLoaded() {
@@ -46,7 +45,7 @@
         }
 
         function poll() {
-            plugin().poll("anything");
+            plugin().poll();
         }
         
         function pluginValid()
