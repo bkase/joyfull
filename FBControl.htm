@@ -23,7 +23,8 @@
         function load()
         {
             addEvent(plugin(), 'joystickData', function(joyButton){
-                console.log(joyButton);
+                document.getElementById('type').innerHTML = joyButton.type;
+                document.getElementById('value').innerHTML = joyButton.value;
             });
         }
         function pluginLoaded() {
@@ -44,26 +45,28 @@
             plugin().testEvent();
         }
 
-        function poll() {
-            plugin().poll();
+        var intervalId = -1;
+        function startPoll() {
+            intervalId = setInterval(function() {
+                    plugin().poll();
+                }, 30);
+        }
+
+        function stopPoll() {
+            clearInterval(intervalId);
         }
         
-        function pluginValid()
-        {
-            if(plugin().valid){
-                alert(plugin().echo("This plugin seems to be working!"));
-            } else {
-                alert("Plugin is not working :(");
-            }
-        }
     </script>
 <body onload="load()">
-<object id="plugin0" type="application/x-joyfull" width="300" height="300">
+<object id="plugin0" type="application/x-joyfull" width="0" height="0">
     <param name="onload" value="pluginLoaded" />
 </object><br />
+
+<h3>Type: <div id=type></div></h3>
+<h3>Value: <div id=value></div></h3>
     
-<a href="#" onclick="javascript:pluginValid()">Click me!</a> <br />
 <a href="#" onclick="javascript:init()">Initialize Joystick</a> <br />
-<a href="#" onclick="javascript:poll()">Poll for a value</a> <br />
+<a href="#" onclick="javascript:startPoll()">Start polling for values</a> <br />
+<a href="#" onclick="javascript:stopPoll()">Stop polling for values</a> <br />
 </body>
 </html>
