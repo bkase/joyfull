@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>test page for object fbcontrol</title>
+</head>
+<script src="joyfull.js"></script>
+<script>
+    window.onload = function(){
+        var joystick = new Joystick('/dev/input/js0', 30, onJoystickEvent);
+    }
+
+    function onJoystickEvent(type, value){
+        console.log(type + ", " + value);
+        document.getElementById('type').innerHTML = type;
+        document.getElementById('value').innerHTML = value;
+    }
+</script>
+<body>
+<h3>Type: <div id=type></div></h3>
+<h3>Value: <div id=value></div></h3>
+</body>
+</html>
