@@ -15,21 +15,25 @@ v0.1 API
 Warning: Subject to change!
 
 ```javascript
-plugin().init(pathToDevice) //where pathToDevice is the path to 
-                            //the Joystick file descriptor on your machine
-setInterval(function() {
-  plugin().poll();
-}, rateInMillisToFlushJoyEventBuffer);
+var onJoystickEvent = function(type, value) {
+    console.log(type + ", " + value);
+};
 
-var joyEventHandler = function(joyButton) {
-  if (joyButton.type == 'analog_x') {
-    xPos += joyButton.value;
-  }
-}
-
-plugin().addEventListener('joystickData', joyEventHandler, false);
-
+window.onload = function(){
+    var joystick = new Joystick('/dev/input/js0', 30, onJoystickEvent);
+};
 ```
+
+_Joystick_
+
+    _constructor(pathToJoystickInput, millisToWait, handler)_:
+        The constructor, `handler` is a `function(type, value)` which gets called every `millisToWait` milliseconds with new data from the joystick at `pathToJoystickInput`
+
+    _type_: a string denoting the type of the button
+
+    _value_: `0` or `1` if digital, `-32,768` to `32,768` otherwise
+        
+## If you want to hack `joyfull.js`
 
 _joyButton object_
 

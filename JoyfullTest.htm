@@ -4,15 +4,16 @@
 </head>
 <script src="joyfull.js"></script>
 <script>
-    window.onload = function(){
-        var joystick = new Joystick('/dev/input/js0', 30, onJoystickEvent);
-    }
-
-    function onJoystickEvent(type, value){
+    var onJoystickEvent = function(type, value) {
         console.log(type + ", " + value);
         document.getElementById('type').innerHTML = type;
         document.getElementById('value').innerHTML = value;
-    }
+    };
+
+    window.onload = function(){
+        var joystick = new Joystick('/dev/input/js0', 30, onJoystickEvent);
+    };
+
 </script>
 <body>
 <h3>Type: <div id=type></div></h3>
