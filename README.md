@@ -26,12 +26,12 @@ window.onload = function(){
 
 _Joystick_
 
-    _constructor(pathToJoystickInput, millisToWait, handler)_:
+* _constructor(pathToJoystickInput, millisToWait, handler)_:
         The constructor, `handler` is a `function(type, value)` which gets called every `millisToWait` milliseconds with new data from the joystick at `pathToJoystickInput`
 
-    _type_: a string denoting the type of the button
+    * _type_: a string denoting the type of the button
 
-    _value_: `0` or `1` if digital, `-32,768` to `32,768` otherwise
+    * _value_: `0` or `1` if digital, `-32,768` to `32,768` otherwise
         
 ## If you want to hack `joyfull.js`
 
