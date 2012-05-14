@@ -31,7 +31,7 @@ _Joystick_
 
     * _type_: a string denoting the type of the button
 
-    * _value_: `0` or `1` if digital, `-32,768` to `32,768` otherwise
+    * _value_: `0` if pressed or `1` if not pressed when digital, `-32,768` to `32,768` otherwise
         
 ## If you want to hack `joyfull.js`
 
