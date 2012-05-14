@@ -1,0 +1,146 @@
+{
+    'start': {
+        'num': 3,
+        'digital': true
+    },
+    'select': {
+        'num': 0,
+        'digital': true
+    },
+    'home': {
+        'num': 16,
+        'digital': true
+    },
+    'x-d': {
+        'num': 14,
+        'digital': true
+    },
+    'x-a': {
+        'num': 18,
+        'digital': false
+    },
+    'sq-d': {
+        'num': 15,
+        'digital': true
+    },
+    'sq-a': {
+        'num': 19,
+        'digital': false
+    },
+    'tr-d': {
+        'num': 12,
+        'digital': true
+    },
+    'tr-a': {
+        'num': 16,
+        'digital': false
+    },
+    'circ-d': {
+        'num': 13,
+        'digital': true
+    },
+    'circ-a': {
+        'num': 17,
+        'digital': false
+    },
+    'r-stick-push': {
+        'num': 2,
+        'digital': true
+    },
+    'r-stick-x': {
+        'num': 2,
+        'digital': false
+    },
+    'r-stick-y': {
+        'num': 3,
+        'digital': false
+    },
+    'l-stick-push': {
+        'num': 1,
+        'digital': true
+    },
+    'l-stick-x': {
+        'num': 0,
+        'digital': false
+    },
+    'l-stick-y': {
+        'num': 1,
+        'digital': false
+    },
+    'dpad-d-d': {
+        'num': 6,
+        'digital': true
+    },
+    'dpad-d-a': {
+        'num': 10,
+        'digital': false
+    },
+    'dpad-l-d': {
+        'num': 7,
+        'digital': true
+    },
+    'dpad-u-d': {
+        'num': 4,
+        'digital': true
+    },
+    'dpad-u-a': {
+        'num': 8,
+        'digital': false
+    },
+    'dpad-r-d': {
+        'num': 5,
+        'digital': true
+    },
+    'dpad-r-a': {
+        'num': 9,
+        'digital': false
+    },
+    'l1-d': {
+        'num': 10,
+        'digital': true
+    },
+    'l1-a': {
+        'num': 14,
+        'digital': false
+    },
+    'l2-d': {
+        'num': 8,
+        'digital': true
+    },
+    'l2-a': {
+        'num': 12,
+        'digital': false
+    },
+    'r1-d': {
+        'num': 11,
+        'digital': true
+    },
+    'r1-a': {
+        'num': 15,
+        'digital': false
+    },
+    'r2-d': {
+        'num': 9,
+        'digital': true
+    },
+    'r2-a': {
+        'num': 13,
+        'digital': false
+    },
+    'sixaxis-1': {
+        'num': 23,
+        'digital': false
+    },
+    'sixaxis-2': {
+        'num': 24,
+        'digital': false
+    },
+    'sixaxis-3': {
+        'num': 25,
+        'digital': false
+    },
+    'sixaxis-4': {
+        'num': 26,
+        'digital': false
+    }
+}
